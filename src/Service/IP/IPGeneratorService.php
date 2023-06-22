@@ -1,6 +1,6 @@
 <?php
 
-namespace Oni4i\FakeNzGenerator\Service;
+namespace Oni4i\FakeNzGenerator\Service\IP;
 
 use Oni4i\FakeNzGenerator\Resource\IPResource;
 
@@ -48,6 +48,18 @@ class IPGeneratorService implements IPGeneratorServiceInterface
         }
 
         return long2ip($prevIPLong);
+    }
+
+    public function rand(): string
+    {
+        $resource = IPResource::extract();
+
+        $range = $resource[array_rand($resource)];
+
+        $start = ip2long($range[0]);
+        $end = ip2long($range[1]);
+
+        return long2ip(rand($start, $end));
     }
 
     private function findIPRange(int $ipLong): array
