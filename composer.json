@@ -1,0 +1,17 @@
+{
+    "name": "oni4i/fake-nz-generator",
+    "description": "Fake New Zeland data generator",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Oni4i\\FakeNzGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikita Shipilov",
+            "email": "nikita.shipilov.22@gmail.com"
+        }
+    ],
+    "require": {}
+}
