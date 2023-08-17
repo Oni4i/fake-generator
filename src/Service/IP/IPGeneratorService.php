@@ -25,7 +25,7 @@ class IPGeneratorService implements IPGeneratorServiceInterface
                 throw new \RuntimeException('Out of range');
             }
 
-            $nextIPLong = ip2long([$key + 1][0]);
+            $nextIPLong = ip2long($ips[$key + 1][0]);
         }
 
         return long2ip($nextIPLong);
