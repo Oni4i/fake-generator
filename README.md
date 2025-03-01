@@ -2,7 +2,7 @@
 
 ![Downloads](https://img.shields.io/packagist/dt/Oni4i/fake-nz-generator?style=for-the-badge)
 
-Generator of New Zealand valid data like IP, zip code and city
+PHP Generator of New Zealand valid data like IP, zip code and city
 
 `composer require oni4i/fake-nz-generator`
 
