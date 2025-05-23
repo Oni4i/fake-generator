@@ -2,12 +2,12 @@
 
 namespace Oni4i\FakeNzGenerator\Service\IP;
 
-use Oni4i\FakeNzGenerator\Service\RandomGeneratorInterface;
-
-interface IPGeneratorServiceInterface extends RandomGeneratorInterface
+interface IPGeneratorServiceInterface
 {
-    public function first(): string;
-    public function next(string $lastIP): string;
-    public function prev(string $lastIP): string;
-    public function rand(): string;
+    const RESOURCE_NAME = 'IPResource';
+
+    public function first(string $resourceAlpha2): string;
+    public function next(string $lastIP, string $resourceAlpha2): string;
+    public function prev(string $lastIP, string $resourceAlpha2): string;
+    public function rand(string $resourceAlpha2): string;
 }

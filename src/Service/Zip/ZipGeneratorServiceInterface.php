@@ -2,10 +2,9 @@
 
 namespace Oni4i\FakeNzGenerator\Service\Zip;
 
-use Oni4i\FakeNzGenerator\Service\RandomGeneratorInterface;
-
-interface ZipGeneratorServiceInterface extends RandomGeneratorInterface
+interface ZipGeneratorServiceInterface
 {
-    public function rand(): string;
-    public function randByCity(string $city): string;
+    const RESOURCE_NAME = 'ZipCodeResource';
+
+    public function randByCity(string $city, string $resourceAlpha2): string;
 }

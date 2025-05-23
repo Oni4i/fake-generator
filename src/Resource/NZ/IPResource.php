@@ -1,6 +1,8 @@
 <?php
 
-namespace Oni4i\FakeNzGenerator\Resource;
+namespace Oni4i\FakeNzGenerator\Resource\NZ;
+
+use Oni4i\FakeNzGenerator\Resource\ResourceInterface;
 
 final class IPResource implements ResourceInterface
 {

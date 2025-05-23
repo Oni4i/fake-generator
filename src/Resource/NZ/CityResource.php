@@ -1,8 +1,10 @@
 <?php
 
-namespace Oni4i\FakeNzGenerator\Resource;
+namespace Oni4i\FakeNzGenerator\Resource\NZ;
 
-class CityResource implements ResourceInterface
+use Oni4i\FakeNzGenerator\Resource\ResourceInterface;
+
+final class CityResource implements ResourceInterface
 {
     public static function extract(): array
     {

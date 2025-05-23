@@ -1,0 +1,83 @@
+<?php
+
+namespace Oni4i\FakeNzGenerator\Resource\IT;
+
+use Oni4i\FakeNzGenerator\Resource\ResourceInterface;
+
+class CityResource implements ResourceInterface
+{
+    public static function extract(): array
+    {
+        return [
+            "Rome",
+            "Milan",
+            "Naples",
+            "Turin",
+            "Palermo",
+            "Genoa",
+            "Bologna",
+            "Florence",
+            "Bari",
+            "Catania",
+            "Venice",
+            "Verona",
+            "Messina",
+            "Padua",
+            "Trieste",
+            "Brescia",
+            "Taranto",
+            "Prato",
+            "Parma",
+            "Reggio Calabria",
+            "Modena",
+            "Reggio Emilia",
+            "Perugia",
+            "Livorno",
+            "Ravenna",
+            "Cagliari",
+            "Foggia",
+            "Salerno",
+            "Rimini",
+            "Ferrara",
+            "Sassari",
+            "Syracuse",
+            "Pescara",
+            "Monza",
+            "Latina",
+            "Bergamo",
+            "Forlì",
+            "Trento",
+            "Vicenza",
+            "Terni",
+            "Novara",
+            "Bolzano",
+            "Piacenza",
+            "Ancona",
+            "Arezzo",
+            "Andria",
+            "Udine",
+            "Pisa",
+            "Cesena",
+            "Pesaro",
+            "Lecce",
+            "La Spezia",
+            "Alessandria",
+            "Catanzaro",
+            "Pistoia",
+            "Lucca",
+            "Brindisi",
+            "Como",
+            "Treviso",
+            "Grosseto",
+            "Varese",
+            "Sesto San Giovanni",
+            "Caserta",
+            "Ragusa",
+            "Asti",
+            "Pavia",
+            "Crotone",
+            "Savona",
+            "Benevento"
+        ];
+    }
+}

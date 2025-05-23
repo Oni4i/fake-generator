@@ -2,22 +2,22 @@
 
 namespace Oni4i\FakeNzGenerator\Service\Zip;
 
-use Oni4i\FakeNzGenerator\Resource\ZipCodeResource;
+use Oni4i\FakeNzGenerator\Traits\ResourceByAlpha2Trait;
 
 class ZipGeneratorService implements ZipGeneratorServiceInterface
 {
-    public function rand(): string
+    use ResourceByAlpha2Trait;
+
+    public function randByCity(string $city, string $resourceAlpha2): string
     {
-        $resource = ZipCodeResource::extract();
+        $resourceNamespace = $this->getResourceNamespace($resourceAlpha2);
+        $zipResource = $resourceNamespace . '\\' . self::RESOURCE_NAME;
 
-        $cityZipCodes = $resource[array_rand($resource)];
+        if (!class_exists($zipResource)) {
+            throw new \RuntimeException('Resource does not exist');
+        }
 
-        return $cityZipCodes[array_rand($cityZipCodes)];
-    }
-
-    public function randByCity(string $city): string
-    {
-        $resource = ZipCodeResource::extract();
+        $resource = $zipResource::extract();
 
         $cityZipCodes = $resource[$city] ?? null;
 

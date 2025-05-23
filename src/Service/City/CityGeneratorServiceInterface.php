@@ -2,9 +2,9 @@
 
 namespace Oni4i\FakeNzGenerator\Service\City;
 
-use Oni4i\FakeNzGenerator\Service\RandomGeneratorInterface;
-
-interface CityGeneratorServiceInterface extends RandomGeneratorInterface
+interface CityGeneratorServiceInterface
 {
-    public function rand(): string;
+    const RESOURCE_NAME = 'CityResource';
+
+    public function rand(string $resourceAlpha2): string;
 }

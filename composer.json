@@ -1,5 +1,5 @@
 {
-    "name": "oni4i/fake-nz-generator",
+    "name": "oni4i/fake-generator",
     "description": "Fake New Zeland data generator",
     "type": "library",
     "autoload": {
